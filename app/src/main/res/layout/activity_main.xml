@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#05185E"
+    tools:context=".MainActivity" >
+
+    <TextView
+        android:id="@+id/textView_error_confirmpass"
+        android:layout_width="333dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="62dp"
+        android:layout_marginEnd="16dp"
+        android:text="Пароли не совпадают"
+        android:textColor="#FF0000"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText_confirmpass" />
+
+    <TextView
+        android:id="@+id/textView_error_date"
+        android:layout_width="333dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="62dp"
+        android:layout_marginEnd="16dp"
+        android:text="Не выбрана дата рождения"
+        android:textColor="#FF0000"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText_date" />
+
+    <TextView
+        android:id="@+id/textView_error_passw"
+        android:layout_width="333dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="62dp"
+        android:layout_marginEnd="16dp"
+        android:text="Пароль должен быть не менее 6 символов в длину"
+        android:textColor="#FF0000"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText_password" />
+
+    <Button
+        android:id="@+id/button_register"
+        android:layout_width="276dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="53dp"
+        android:layout_marginEnd="67dp"
+        android:text="Регистрация"
+        android:onClick="Register"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText_confirmpass" />
+
+    <EditText
+        android:id="@+id/editText_password"
+        android:layout_width="284dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="50dp"
+        android:ems="10"
+        android:hint="Пароль"
+        android:inputType="textPassword"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText_date" />
+
+    <EditText
+        android:id="@+id/editText_confirmpass"
+        android:layout_width="284dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="50dp"
+        android:ems="10"
+        android:hint="Подтверждение пароля"
+        android:inputType="textPassword"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText_password" />
+
+    <EditText
+        android:id="@+id/editText_name"
+        android:layout_width="284dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="50dp"
+        android:ems="10"
+        android:hint="Ваше имя"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editText_date"
+        android:layout_width="284dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="52dp"
+        android:ems="10"
+        android:enabled="false"
+        android:hint="Выберите дату рождения"
+        android:inputType="date"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText_surname" />
+
+    <EditText
+        android:id="@+id/editText_surname"
+        android:layout_width="284dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="53dp"
+        android:ems="10"
+        android:hint="Ваша фамилия"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/editText_date"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText_name" />
+
+    <Button
+        android:id="@+id/button_calendar"
+        android:layout_width="62dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="264dp"
+        android:layout_marginEnd="2dp"
+
+        app:icon="@android:drawable/ic_menu_my_calendar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/editText_date"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/textView_error_name"
+        android:layout_width="333dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="63dp"
+        android:layout_marginEnd="15dp"
+        android:text="Имя должно содержать только кириллицу или латиницу и иметь длину не менее 3 символов"
+        android:textColor="#FF0000"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText_name" />
+
+    <TextView
+        android:id="@+id/textView_error_sname"
+        android:layout_width="349dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="62dp"
+        android:layout_marginEnd="16dp"
+        android:text="Фамилия должна содержать только кириллицу или латиницу и иметь длину не менее 3 символов"
+        android:textColor="#FF0000"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText_surname" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
